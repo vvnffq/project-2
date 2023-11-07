@@ -80,10 +80,12 @@ let button;
 let descriptions = [];
 let randomDescription = "";
 let button2;
+let canvas;
 
 function setup() {
-  canvas = createCanvas(1450, 800);
+  createCanvas(1450, 800);
   paint = createGraphics(554,382);// create new canvas
+  canvas = paint.canvas;
 
   // button for generating painting & title
   button = createButton("GENERATE");
@@ -128,8 +130,10 @@ function submitDescription() {
   
    let obj = {
      "description" : inputEl.value,
-     "img": 
+     "img": canvas.toDataURL('image/jpeg')
    };
+  
+  console.log(obj);
 
         //stringify the object
         let jsonData = JSON.stringify(obj);
