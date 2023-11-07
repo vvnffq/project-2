@@ -39,3 +39,9 @@ function renderArtworks (data) {
   galleryEl.innerHTML = galleryInnerHTML;
 
 }
+
+// Add click event listener to button, navigate back to generator page
+let generatorButton = document.getElementById("generator");
+generatorButton.addEventListener("click", function() {
+    window.location.href = "/";
+});

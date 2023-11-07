@@ -42,3 +42,7 @@ h1 {
 .info p {
     font-size: 1em;
 }
+
+#generator {
+  margin: 20px;
+}
