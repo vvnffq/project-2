@@ -3,7 +3,7 @@ body {
     text-align: center;
 }
 
-.gallery {
+#gallery {
     display: flex;
     justify-content: space-between;
 }
@@ -30,4 +30,8 @@ body {
 
 .description p {
     font-size: 1em;
+}
+
+background{
+  color: 
 }

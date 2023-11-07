@@ -126,7 +126,10 @@ function submitDescription() {
   const inputEl = document.getElementById('description');
   console.log(inputEl.value);
   
-   let obj = {"description" : inputEl.value};
+   let obj = {
+     "description" : inputEl.value,
+     "img": 
+   };
 
         //stringify the object
         let jsonData = JSON.stringify(obj);
@@ -196,4 +199,5 @@ function updatePaint() {
 // save image to data
 function saveImg() {
   const imgData = canvas.toDataURL('image/jpeg');
+  
 }
