@@ -1,0 +1,30 @@
+body {
+  background-image: url('background.png');
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+button {
+  margin-top: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+#sketchContainter {
+  margin: 0%;
+}
+
+#descriptionContainer {
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  align-items: center;
+}

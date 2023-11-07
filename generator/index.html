@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>Random Pollock Generator</title>
+  </head>
+
+  <body>
+    <script src="sketch.js"></script>
+     <!-- Button to fetch and display a random description -->
+    <button id="fetchDescriptionButton">+Description</button>
+
+     <!-- Display area for the fetched description -->
+    <div id="descriptionContainer"></div>
+ 
+    <script>
+        // Function to fetch a random description from API
+        function fetchRandomDescription() {
+            const apiUrl = 'https://api.artic.edu/api/v1/artworks';
+ 
+            fetch(apiUrl)
+                .then(response => {
+                  if (response.ok) {
+                      return response.json();
+                   } else {
+                      throw new Error('Failed to fetch data');
+                  }
+                })
+                .then(data => {
+                  const descriptions = data.data.map(artwork => artwork.description);
+ 
+                  if (descriptions.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * descriptions.length);
+                    const randomDescription = descriptions[randomIndex];
+ 
+                    const descriptionContainer = document.getElementById('descriptionContainer');
+                    descriptionContainer.innerHTML = randomDescription; // Use innerHTML to render HTML tags
+                  } else {
+                    console.error('No descriptions available.');
+                  }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+ 
+       // Event listener for button
+      const fetchDescriptionButton = document.getElementById('fetchDescriptionButton');
+      fetchDescriptionButton.addEventListener('click', fetchRandomDescription);
+     </script>
+  </body>
+</html>
