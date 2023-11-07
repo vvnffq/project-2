@@ -11,6 +11,28 @@ db.on("ready", () => {
 });
 db.connect();
 
+let artwork = [];
+
+app.post('/gallery', (req,res)=> {
+    console.log(req.body);
+    let obj = {
+        title : req.body.title,
+        description : req.body.description,
+        // artwork: req.body.artwork
+    }
+
+    db.push("artworkData", obj);
+    res.json({task:"success"});
+})
+
+// app.get('/gallery', (req,res)=> {
+//     db.get("artworkData").then(galleryData => {
+//         let obj = {
+//             data
+//         }
+//     })
+// })
+
 let port = process.env.PORT || 3000;
 app.listen(port, ()=> {
 console.log('listening at ', port);
