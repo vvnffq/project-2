@@ -149,7 +149,7 @@ function submitDescription() {
         })
         .then(response => response.json())
         .then(data => {console.log(data)});
-  
+  window.location.href = "/gallery"
 }
 
 function draw() {
