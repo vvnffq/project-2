@@ -1,6 +1,6 @@
 let express = require("express");
 let app = express();
-app.use(express.json());
+app.use(express.json({ limit: '2mb' }));
 
 app.use('/', express.static('generator'));
 // app.use('/gallery', express.static('gallery'));
@@ -15,11 +15,11 @@ db.connect();
 let artwork = [];
 
 app.post('/api/gallery', (req,res)=> {
-    console.log(req.body);
+    // console.log(req.body);
     let obj = {
         // title : req.body.title,
         description : req.body.description,
-        // artwork: req.body.artwork
+        img: req.body.img
     }
 
     db.push("artworkData", obj);

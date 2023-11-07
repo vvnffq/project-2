@@ -129,11 +129,12 @@ function submitDescription() {
   console.log(inputEl.value);
   
    let obj = {
+     "title" : "The " + selectedAdj + " " + selectedNoun,
      "description" : inputEl.value,
-     "img": canvas.toDataURL('image/jpeg')
+     "img" : canvas.toDataURL('image/jpeg')
    };
   
-  console.log(obj);
+  // console.log(obj);
 
         //stringify the object
         let jsonData = JSON.stringify(obj);
@@ -203,5 +204,4 @@ function updatePaint() {
 // save image to data
 function saveImg() {
   const imgData = canvas.toDataURL('image/jpeg');
-  
 }
