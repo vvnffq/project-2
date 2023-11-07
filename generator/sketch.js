@@ -97,7 +97,7 @@ function setup() {
   button2.position(1240, 440);
   button2.mousePressed(submitDescription);
   
-//   fetchArtworkDescriptions();
+//   fetchArtworkDescriptions()
   
   for (let i = 0; i < random(10, 120); i++) {
     let x = random(paint.width);
@@ -129,17 +129,17 @@ function submitDescription() {
   console.log(inputEl.value);
   
    let obj = {
-     "title" : title.value,
+     // QUESTION FOR YUQIAN: "title" : title,
      "description" : inputEl.value,
      "img" : canvas.toDataURL('image/jpeg')
    };
   
-  // console.log(obj);
+  console.log(obj);
 
         //stringify the object
         let jsonData = JSON.stringify(obj);
 
-        //fetch to route noCups
+        //fetch to route gallery
         fetch('/api/gallery', {
             method: 'POST',
             headers: {
