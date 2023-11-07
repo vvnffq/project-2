@@ -200,8 +200,7 @@ function updatePaint() {
   }
 }
 
-function test() {
-  fetch();
-  
+// save image to data
+function saveImg() {
+  const imgData = canvas.toDataURL('image/jpeg');
 }
-
