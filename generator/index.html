@@ -13,7 +13,6 @@
 <!--     <button id="fetchDescriptionButton">+Description</button> -->
 
      <!-- Display area for the fetched description -->
-    <div id="descriptionContainer"></div>
  
     <script>
         // Function to fetch a random description from API
@@ -50,5 +49,10 @@
       const fetchDescriptionButton = document.getElementById('fetchDescriptionButton');
       fetchDescriptionButton.addEventListener('click', fetchRandomDescription);
      </script>
+    
+    <div id="descriptionContainer">
+    <input id="description" type="text"/>
+    </div>
+    
   </body>
 </html>

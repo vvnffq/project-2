@@ -86,13 +86,13 @@ function setup() {
   paint = createGraphics(554,382);// create new canvas
 
   // button for generating painting & title
-  button = createButton("+Title");
-  button.position(1252, 348);
+  button = createButton("GENERATE");
+  button.position(1218, 348);
   button.mousePressed(updatePaint);
 
   // button for generating description
-  button2 = createButton('+Intro');
-  button2.position(1265, 440);
+  button2 = createButton('SUBMIT');
+  button2.position(1240, 440);
   // button2.mousePressed(getRandomDescription);
   
 //   fetchArtworkDescriptions();

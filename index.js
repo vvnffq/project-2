@@ -3,6 +3,7 @@ let app = express();
 app.use(express.json());
 
 app.use('/', express.static('generator'));
+app.use('/gallery', express.static('gallery'));
 
 const { Database } = require("quickmongo");
 const db = new Database("mongodb+srv://vivianffq:mongodbpassword@cluster0.pkugayl.mongodb.net/?retryWrites=true&w=majority");

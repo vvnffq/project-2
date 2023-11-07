@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artwork {
+    width: 45%; /* Adjust as needed */
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border for separation */
+}
+
+.artwork img {
+    max-width: 100%;
+    height: auto;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.description h2 {
+    font-size: 1.2em;
+}
+
+.description p {
+    font-size: 1em;
+}
