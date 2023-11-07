@@ -91,11 +91,11 @@ function setup() {
   button.mousePressed(updatePaint);
 
   // button for generating description
-  // button2 = createButton('+Intro');
-  // button2.position(1265, 440);
+  button2 = createButton('+Intro');
+  button2.position(1265, 440);
   // button2.mousePressed(getRandomDescription);
   
-  fetchArtworkDescriptions();
+//   fetchArtworkDescriptions();
   
   for (let i = 0; i < random(10, 120); i++) {
     let x = random(paint.width);
@@ -156,9 +156,9 @@ function draw() {
   noStroke();
   fill(20);
   textSize(15);
-  text("Interactive media art", 1042, 408);
-  text("554mm x 382mm", 1042, 430);
-  text("2023",1042, 452);
+  // text("Interactive media art", 1042, 408);
+  // text("554mm x 382mm", 1042, 430);
+  // text("2023",1042, 452);
 
   // random adj + noun
   strokeWeight(1);
