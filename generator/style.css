@@ -14,11 +14,14 @@ button {
   margin: 0%;
 }
 
-/* #descriptionContainer {
-  margin-bottom: 3%;
-  margin-left: 3%;
-  margin-right: 3%;
-} */
+#description {
+  position: absolute;
+  display: flex;
+  top: 390px;
+  left: 1042px;
+  width: 265px;
+  height: 30px;
+}
 
 html, body {
   margin: 0;
