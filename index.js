@@ -33,14 +33,6 @@ app.get('/api/gallery', (req, res) => {
   })
 })
 
-// app.get('/gallery', (req,res)=> {
-//     db.get("artworkData").then(galleryData => {
-//         let obj = {
-//             data
-//         }
-//     })
-// })
-
 let port = process.env.PORT || 3000;
 app.listen(port, ()=> {
 console.log('listening at ', port);

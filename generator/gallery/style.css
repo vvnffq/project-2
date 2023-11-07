@@ -1,33 +1,44 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
 }
 
 #gallery {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .artwork {
-    width: 45%; /* Adjust as needed */
+    width: 30%;
+    margin-bottom: 20px;
     box-sizing: border-box;
+    background-color: #fff;
     padding: 20px;
-/*     border: 1px solid #ccc; Add a border for separation */
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .artwork img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
-.description {
+.info {
+    text-align: left;
     margin-top: 10px;
 }
 
-.description h2 {
+.info h2 {
     font-size: 1.2em;
 }
 
-.description p {
+.info p {
     font-size: 1em;
 }

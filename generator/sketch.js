@@ -129,7 +129,7 @@ function submitDescription() {
   console.log(inputEl.value);
   
    let obj = {
-     "title" : "The " + selectedAdj + " " + selectedNoun,
+     "title" : title.value,
      "description" : inputEl.value,
      "img" : canvas.toDataURL('image/jpeg')
    };
@@ -165,7 +165,8 @@ function draw() {
   stroke(20);
   fill(20);
   textSize(17);
-  text("The " + selectedAdj + " " + selectedNoun, 1042, 364);
+  let title = "The " + selectedAdj + " " + selectedNoun
+  text(title, 1042, 364);
   
   // draw new canvas onto main canvas
   image(paint, 233, 198);
