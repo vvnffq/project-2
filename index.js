@@ -17,13 +17,19 @@ let artwork = [];
 app.post('/api/gallery', (req,res)=> {
     console.log(req.body);
     let obj = {
-        title : req.body.title,
+        // title : req.body.title,
         description : req.body.description,
         // artwork: req.body.artwork
     }
 
     db.push("artworkData", obj);
     res.json({task:"success"});
+});
+
+app.get('/api/gallery', (req, res) => {
+  db.get('artworkData').then((data) => {
+    res(data);
+  })
 })
 
 // app.get('/gallery', (req,res)=> {

@@ -125,6 +125,22 @@ function setup() {
 function submitDescription() {
   const inputEl = document.getElementById('description');
   console.log(inputEl.value);
+  
+   let obj = {"description" : inputEl.value};
+
+        //stringify the object
+        let jsonData = JSON.stringify(obj);
+
+        //fetch to route noCups
+        fetch('/api/gallery', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: jsonData
+        })
+        .then(response => response.json())
+        .then(data => {console.log(data)});
 }
 
 function draw() {
