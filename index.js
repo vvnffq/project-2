@@ -28,7 +28,8 @@ app.post('/api/gallery', (req,res)=> {
 
 app.get('/api/gallery', (req, res) => {
   db.get('artworkData').then((data) => {
-    res(data);
+    console.log(data);
+    res.json(data);
   })
 })
 
