@@ -3,7 +3,7 @@ let app = express();
 app.use(express.json());
 
 app.use('/', express.static('generator'));
-app.use('/gallery', express.static('gallery'));
+// app.use('/gallery', express.static('gallery'));
 
 const { Database } = require("quickmongo");
 const db = new Database("mongodb+srv://vivianffq:mongodbpassword@cluster0.pkugayl.mongodb.net/?retryWrites=true&w=majority");
@@ -14,7 +14,7 @@ db.connect();
 
 let artwork = [];
 
-app.post('/gallery', (req,res)=> {
+app.post('/api/gallery', (req,res)=> {
     console.log(req.body);
     let obj = {
         title : req.body.title,

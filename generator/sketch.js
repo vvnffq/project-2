@@ -93,7 +93,7 @@ function setup() {
   // button for generating description
   button2 = createButton('SUBMIT');
   button2.position(1240, 440);
-  // button2.mousePressed(getRandomDescription);
+  button2.mousePressed(submitDescription);
   
 //   fetchArtworkDescriptions();
   
@@ -122,33 +122,9 @@ function setup() {
   }
 }
 
-function fetchArtworkDescriptions() {
-  try {
-    fetch('https://api.artic.edu/api/v1/artworks')
-      .then(response => response.json())
-      .then(data => {
-        if (data && data.data) {
-          descriptions = data.data.map(artwork => artwork.description);
-          redraw(); // Redraw the canvas to display descriptions
-        } else {
-          console.error('Failed to fetch data:', data);
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-}
-
-function getRandomDescription() {
-  if (descriptions.length > 0) {
-    // Pick a random description
-    const randomIndex = floor(random(descriptions.length));
-    randomDescription = descriptions[randomIndex];
-    redraw(); // Redraw the canvas to display the random description
-  }
+function submitDescription() {
+  const inputEl = document.getElementById('description');
+  console.log(inputEl.value);
 }
 
 function draw() {
@@ -207,3 +183,9 @@ function updatePaint() {
     lines[j].move();
   }
 }
+
+function test() {
+  fetch();
+  
+}
+
