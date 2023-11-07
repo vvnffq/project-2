@@ -14,7 +14,7 @@ button {
   margin: 0%;
 }
 
-#description {
+input {
   position: absolute;
   display: flex;
   top: 390px;

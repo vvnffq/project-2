@@ -88,13 +88,13 @@ function setup() {
   canvas = paint.canvas;
 
   // button for generating painting & title
-  button = createButton("GENERATE");
-  button.position(1218, 348);
+  button = createButton("Generate");
+  button.position(1200, 305);
   button.mousePressed(updatePaint);
 
   // button for generating description
-  button2 = createButton('SUBMIT');
-  button2.position(1240, 440);
+  button2 = createButton('Submit');
+  button2.position(1214, 400);
   button2.mousePressed(submitDescription);
   
 //   fetchArtworkDescriptions()
@@ -134,7 +134,7 @@ function submitDescription() {
      "img" : canvas.toDataURL('image/jpeg')
    };
   
-  console.log(obj);
+  // console.log(obj);
 
         //stringify the object
         let jsonData = JSON.stringify(obj);
@@ -149,6 +149,7 @@ function submitDescription() {
         })
         .then(response => response.json())
         .then(data => {console.log(data)});
+  
 }
 
 function draw() {
