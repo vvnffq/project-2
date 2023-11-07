@@ -168,13 +168,6 @@ function draw() {
   text(randomDescription, 1042, 520);
 }
 
-// CANNOT RESIZE IT PROPERLY!//
-// function windowResized(){
-//   // console.log("resized");
-  // resizeCanvas(windowWidth,windowHeight);
-  // resizeGraphics(windowWidth,windowHeight);
-// }
-
 // random text drawn from arrays
 function selectRandom() {
   let adj = wordData.adj;
