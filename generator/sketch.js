@@ -84,7 +84,7 @@ let canvas;
 
 function setup() {
   createCanvas(1450, 800);
-  paint = createGraphics(554,382);// create new canvas
+  paint = createGraphics(554, 382);// create new canvas
   canvas = paint.canvas;
 
   // button for generating painting & title
@@ -96,9 +96,9 @@ function setup() {
   button2 = createButton('Submit');
   button2.position(1214, 400);
   button2.mousePressed(submitDescription);
-  
-//   fetchArtworkDescriptions()
-  
+
+  //   fetchArtworkDescriptions()
+
   for (let i = 0; i < random(10, 120); i++) {
     let x = random(paint.width);
     let y = random(paint.height);
@@ -127,28 +127,28 @@ function setup() {
 function submitDescription() {
   const inputEl = document.getElementById('description');
   console.log(inputEl.value);
-  
-   let obj = {
-     // QUESTION FOR YUQIAN: "title" : title,
-     "description" : inputEl.value,
-     "img" : canvas.toDataURL('image/jpeg')
-   };
-  
+
+  let obj = {
+    // QUESTION FOR YUQIAN: "title" : title,
+    "description": inputEl.value,
+    "img": canvas.toDataURL('image/jpeg')
+  };
+
   // console.log(obj);
 
-        //stringify the object
-        let jsonData = JSON.stringify(obj);
+  //stringify the object
+  let jsonData = JSON.stringify(obj);
 
-        //fetch to route gallery
-        fetch('/api/gallery', {
-            method: 'POST',
-            headers: {
-                "Content-type": "application/json"
-            },
-            body: jsonData
-        })
-        .then(response => response.json())
-        .then(data => {console.log(data)});
+  //fetch to route gallery
+  fetch('/api/gallery', {
+    method: 'POST',
+    headers: {
+      "Content-type": "application/json"
+    },
+    body: jsonData
+  })
+    .then(response => response.json())
+    .then(data => { console.log(data) });
   window.location.href = "/gallery"
 }
 
@@ -168,7 +168,7 @@ function draw() {
   textSize(17);
   let title = "The " + selectedAdj + " " + selectedNoun
   text(title, 1042, 364);
-  
+
   // draw new canvas onto main canvas
   image(paint, 233, 198);
 
@@ -189,9 +189,9 @@ function selectRandom() {
 // random title + random painting
 function updatePaint() {
   selectRandom();
-      
+
   paint.background(random(255), random(255), random(255));
-  
+
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].move();
     bubbles[i].show();

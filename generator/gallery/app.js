@@ -45,3 +45,8 @@ let generatorButton = document.getElementById("generator");
 generatorButton.addEventListener("click", function() {
     window.location.href = "/";
 });
+
+let goback = document.getElementById('goback')
+goback.addEventListener("click", function() {
+  window.location.href = "/intro";
+});

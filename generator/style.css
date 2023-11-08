@@ -1,5 +1,5 @@
 body {
-/*   background-image: url('background.png'); */
+  /*   background-image: url('background.png'); */
   background-repeat: repeat;
   background-size: cover;
 }
@@ -26,10 +26,12 @@ input {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
+
 canvas {
   display: block;
   align-items: center;
